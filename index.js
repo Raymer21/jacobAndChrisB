@@ -1,6 +1,10 @@
-const Discord = require('discord.js');
 const {Client, Intents } = require('discord.js');
-const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
+const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
+
+(async () => {
+    client.login(process.env.token);
+
+})
 
 const prefix = "?";
 
@@ -13,7 +17,3 @@ Client.on('message', async message => {
         message.channel.send("You gay");
     }
 })
-
-
-
-client.login(process.env.token);

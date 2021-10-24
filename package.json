@@ -1,6 +1,6 @@
 {
   "name": "jacobandchrisb",
-  "version": "1.0.0",
+  "version": "16.6.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/Raymer21/jacobAndChrisB#readme",
   "dependencies": {
-    "discord.js": "^13.2.0"
+    "discord.js": "^16.6.0"
   }
 }
