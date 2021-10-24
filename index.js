@@ -1,13 +1,14 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();
+const {Client, Intents } = require('discord.js');
+const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 
 const prefix = "?";
 
-client.on('ready', () => {
-    console.log(`Logged in!`);
+Client.on('ready', () => {
+    console.log(`Logged in!`); 
 })
 
-client.on('message', async message => {
+Client.on('message', async message => {
     if(message.content.startsWith(`{prefix}test`)){
         message.channel.send("You gay");
     }
