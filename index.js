@@ -1,8 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const config = require('config.json');
 
-const prefix = config.prefix;
+const prefix = "?";
 
 client.on('ready', () => {
     console.log(`Logged in!`);
@@ -16,4 +15,4 @@ client.on('message', async message => {
 
 
 
-client.login(config.token);
+client.login(process.env.token);
